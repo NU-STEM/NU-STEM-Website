@@ -39,7 +39,7 @@ var fontsDir = __dirname + "/fonts/",
 	scssDir = __dirname + "/scss/",
 	cssDir = __dirname + "/css/",
 	jsDir = __dirname + "/js/";
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 80));
 app.set("views", __dirname + "/jade");
 app.set("view engine", "jade");
 app.engine("jade", jade.__express);
@@ -51,7 +51,7 @@ app.get("/", function(req, res) {
 	res.render("index");
 });
 app.get("*", function(req, res) {
-	req.end();
+	res.end();
 });
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
