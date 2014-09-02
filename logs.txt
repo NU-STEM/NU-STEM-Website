@@ -1,0 +1,101 @@
+2014-09-02T01:00:25.493745+00:00 app[web.1]:      accept: 'application/vnd.github.beta+json' } }
+2014-09-02T01:00:25.506588+00:00 app[web.1]: 
+2014-09-02T01:00:25.506661+00:00 app[web.1]: events.js:72
+2014-09-02T01:00:25.506948+00:00 app[web.1]:         throw er; // Unhandled 'error' event
+2014-09-02T01:00:25.506958+00:00 app[web.1]:               ^
+2014-09-02T01:00:25.508540+00:00 app[web.1]: Error: listen EACCES
+2014-09-02T01:00:25.508542+00:00 app[web.1]:     at errnoException (net.js:904:11)
+2014-09-02T01:00:25.508543+00:00 app[web.1]:     at Server._listen2 (net.js:1023:19)
+2014-09-02T01:00:25.508545+00:00 app[web.1]:     at listen (net.js:1064:10)
+2014-09-02T01:00:25.508546+00:00 app[web.1]:     at Server.listen (net.js:1138:5)
+2014-09-02T01:00:25.508548+00:00 app[web.1]:     at Function.app.listen (/app/node_modules/express/lib/application.js:546:24)
+2014-09-02T01:00:25.508550+00:00 app[web.1]:     at Object.<anonymous> (/app/server.js:57:5)
+2014-09-02T01:00:25.508552+00:00 app[web.1]:     at Module._compile (module.js:456:26)
+2014-09-02T01:00:25.508553+00:00 app[web.1]:     at Object.Module._extensions..js (module.js:474:10)
+2014-09-02T01:00:25.508554+00:00 app[web.1]:     at Module.load (module.js:356:32)
+2014-09-02T01:00:25.508556+00:00 app[web.1]:     at Function.Module._load (module.js:312:12)
+2014-09-02T01:00:26.188953+00:00 heroku[web.1]: Process exited with status 8
+2014-09-02T01:00:26.203285+00:00 heroku[web.1]: State changed from starting to crashed
+2014-09-02T01:46:10+00:00 heroku[slug-compiler]: Slug compilation started
+2014-09-02T01:46:18+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-09-02T01:46:18.545293+00:00 heroku[api]: Deploy a5ad165 by nustemclub@gmail.com
+2014-09-02T01:46:18.545577+00:00 heroku[api]: Release v5 created by nustemclub@gmail.com
+2014-09-02T01:46:18.722437+00:00 heroku[web.1]: State changed from crashed to starting
+2014-09-02T01:46:21.089071+00:00 heroku[web.1]: Starting process with command `node release.js`
+2014-09-02T01:46:26.475164+00:00 heroku[web.1]: Process exited with status 0
+2014-09-02T01:46:26.485609+00:00 heroku[web.1]: State changed from starting to crashed
+2014-09-02T01:46:26.486233+00:00 heroku[web.1]: State changed from crashed to starting
+2014-09-02T01:46:29.583179+00:00 heroku[web.1]: Starting process with command `node release.js`
+2014-09-02T01:46:34.196141+00:00 heroku[web.1]: Process exited with status 0
+2014-09-02T01:46:35.260177+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=56eb23ad-3052-4900-8798-24a234333d6d fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:46:35.781520+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=fc688fd5-f0d4-4034-b7fd-8963f85632f1 fwd="54.80.45.215" dyno= connect= service= status=503 bytes=
+2014-09-02T01:46:51.274964+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=c52094e5-dd38-46e2-a2df-d233ac510078 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:47:09.180332+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=43c62d2e-eeab-492d-b7fb-9b87a6a80362 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:49:18.850495+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=b9582abe-97a4-408f-af28-fe7367cf545d fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:49:19.162907+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=2ed77703-35ec-4842-9da3-8615bc0ef90b fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:49:21.192463+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=6d34a3be-abcd-49b3-8d9f-019488a2c99e fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:49:21.492403+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=183cde64-f2bd-4b17-8885-e1d4310bbdd1 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:49:26.720479+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=7a0ad735-c79f-42d5-ac17-9d7b21337e58 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:50:55.153806+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=6d008e56-6238-4b3f-a822-ad1ff5eb2a39 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:56:29.913404+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=2c8f8914-4413-4921-abb4-85b15b064b1c fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T01:56:30.218654+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=d8402c0e-85bf-4dd4-a6f6-c0c0ee368a15 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:02:29.575037+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=a132f60b-dd6a-4a9e-96c6-29130f273ff0 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:02:30.486837+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=e1216ba4-2b38-4e8a-900c-f1ad971b703a fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:02:30.782789+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=bd79eb75-3bf6-4ff9-97c9-4996599c4713 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:03:55.641700+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=88ead05e-08b1-434c-b870-7a7bcb07340f fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:03:55.937181+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=09ba9a23-cd8b-423f-a1ed-3c6f7db3199b fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:03:56.427173+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=c063c141-e678-4b0a-a430-cef82be1b2c4 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:03:56.725401+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=55a26307-c422-46e2-b661-6911821552b0 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:07:42+00:00 heroku[slug-compiler]: Slug compilation started
+2014-09-02T02:07:53+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-09-02T02:07:53.437824+00:00 heroku[web.1]: State changed from crashed to starting
+2014-09-02T02:07:53.274590+00:00 heroku[api]: Deploy 7f58c64 by nustemclub@gmail.com
+2014-09-02T02:07:53.274672+00:00 heroku[api]: Release v6 created by nustemclub@gmail.com
+2014-09-02T02:07:55.763987+00:00 heroku[web.1]: Starting process with command `node release.js`
+2014-09-02T02:07:59.864371+00:00 heroku[web.1]: State changed from crashed to starting
+2014-09-02T02:07:59.864371+00:00 heroku[web.1]: State changed from starting to crashed
+2014-09-02T02:07:59.848881+00:00 heroku[web.1]: Process exited with status 0
+2014-09-02T02:08:02.453927+00:00 heroku[web.1]: Starting process with command `node release.js`
+2014-09-02T02:08:06.538620+00:00 heroku[web.1]: State changed from starting to crashed
+2014-09-02T02:08:06.536601+00:00 heroku[web.1]: Process exited with status 0
+2014-09-02T02:08:07.382905+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=35ab2cc3-b274-41f7-8284-4f60d418eb00 fwd="54.80.45.215" dyno= connect= service= status=503 bytes=
+2014-09-02T02:08:07.793722+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=66d4841a-a777-48fc-baca-27efe90fe980 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:08:07.937293+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=1ecce74d-4954-42f6-85d0-b38c7f7947d8 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:08:08.128786+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=8a56fb81-6937-4c6a-b914-a620af208094 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:28.371131+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=754de273-8dc1-48af-b796-0da9b32723ee fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:28.677752+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=09c6dc4f-6b93-4eb6-9d58-4053a0c282bc fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:29.241648+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=0359fa79-3dc5-4b9c-93d0-ac5f4702890e fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:29.538094+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=da60e0fd-f9d6-4060-a44e-c40a2ac08755 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:29.947791+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=6407b218-3468-4fd2-8200-57ee2c1702b9 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:30.296974+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=09093df3-3d94-47b9-a625-34da220e2370 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:30.571371+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=67d3f308-8064-422a-923d-8d7f19de50ef fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:30.899221+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=1be6cd7d-18a4-4c1e-8777-9d71d7070de2 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:30.982570+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=b615ed42-ecfb-46ee-b5ba-f1c3081400f3 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:31.287610+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=03c33ab7-6f52-4f98-8b3d-4409e514330c fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:31.365415+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=e66781b5-0d8a-4158-8d6c-4e16adf6b50e fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:31.665983+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=a463e376-b4e5-4cbc-9b96-871ac74247f5 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:31.726609+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=1d740741-7d25-422b-a75f-f23d3c8e94e7 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:32.089095+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=0ee1a0a5-fdb0-47fb-8fa8-689fe8d22336 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:31.948631+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=3c69d111-f533-4336-8710-c6507299f8ca fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:32.377387+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=ec305dc1-b317-4600-af53-9fd8d03af7a3 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:32.491461+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=7604c1b3-83cf-4c58-bf58-e06565a2b1cf fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:32.681318+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=6e4f98f4-ad4a-4665-87bd-74664729d438 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:34+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-09-02T02:10:34.758730+00:00 heroku[api]: Deploy f6c580d by nustemclub@gmail.com
+2014-09-02T02:10:34.758821+00:00 heroku[api]: Release v7 created by nustemclub@gmail.com
+2014-09-02T02:10:37.308350+00:00 heroku[web.1]: Starting process with command `node release.js`
+2014-09-02T02:10:42.814562+00:00 heroku[web.1]: Process exited with status 0
+2014-09-02T02:10:42.832897+00:00 heroku[web.1]: State changed from starting to crashed
+2014-09-02T02:10:44.067602+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=7dec45ac-2628-48f5-bdd1-61ada1314e06 fwd="54.80.45.215" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:44.311288+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=0f309516-5d60-44c0-ac64-bc1f15c48f9c fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:10:44.608522+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=4946cc80-abd1-47c5-9d67-c25b5f368d3e fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:13:34.326676+00:00 heroku[api]: Starting process with command `rake db:setup` by nustemclub@gmail.com
+2014-09-02T02:13:38.813006+00:00 heroku[run.7385]: State changed from starting to up
+2014-09-02T02:13:39.571757+00:00 heroku[run.7385]: State changed from up to complete
+2014-09-02T02:13:39.555243+00:00 heroku[run.7385]: Process exited with status 1
+2014-09-02T02:22:10.661107+00:00 heroku[web.1]: State changed from crashed to starting
+2014-09-02T02:22:13.731442+00:00 heroku[web.1]: Starting process with command `node release.js`
+2014-09-02T02:22:19.996343+00:00 heroku[web.1]: State changed from starting to crashed
+2014-09-02T02:22:19.989080+00:00 heroku[web.1]: Process exited with status 0
+2014-09-02T02:22:28.879401+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nustemclub.herokuapp.com request_id=87b7a196-6598-4322-a890-b615b33e904b fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
+2014-09-02T02:22:29.162617+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nustemclub.herokuapp.com request_id=6e64bf7a-f497-4fd2-863c-c285f41e7426 fwd="67.182.183.80" dyno= connect= service= status=503 bytes=
