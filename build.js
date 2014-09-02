@@ -3,8 +3,7 @@ var fs = require("fs"),
 	compressor = require("node-minify"),
 	path = require("path"),
 	_ = require("lodash");
-var fontsDir = __dirname + "/fonts/",
-	imagesDir = __dirname + "/images/",
+var imagesDir = __dirname + "/images/",
 	scssDir = __dirname + "/scss/",
 	cssDir = __dirname + "/css/",
 	jsDir = __dirname + "/js/",
@@ -15,7 +14,8 @@ for (var i = 0, len = files.length; i < len; i++) {
 	ext = path.extname(file);
 	filename = path.basename(file, ext);
 	fs.writeFileSync(cssDir + filename + ".css", sass.renderSync({
-		data: fs.readFileSync(scssDir + file)
+		data: fs.readFileSync(scssDir + file),
+		outputStyle: "compressed"
 	}));
 }
 files = fs.readdirSync(cssDir);
@@ -26,14 +26,6 @@ files = _.filter(files, function(file) {
 });
 files = _.map(files, function(file) {
 	return cssDir + file;
-});
-new compressor.minify({
-	type: "clean-css",
-	fileIn: files,
-	fileOut: cssDir + "stylesheet.min.css",
-	callback: function(err, min) {
-		if (err) console.warn(err);
-	}
 });
 files = fs.readdirSync(jsDir);
 files = _.filter(files, function(file) {

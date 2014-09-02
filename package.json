@@ -12,7 +12,8 @@
 		"jade": "latest",
 		"lodash": "latest",
 		"node-minify": "latest",
-		"node-sass": "latest"
+		"node-sass": "latest",
+		"watchr": "latest"
 	},
 	"engines": {
 		"node": "latest"

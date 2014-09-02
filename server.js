@@ -46,11 +46,6 @@ app.use("/css", express.static(cssDir));
 app.use("/js", express.static(jsDir));
 app.use("/fonts", express.static(fontsDir));
 app.use("/images", express.static(imagesDir));
-app.use("/scss", function(req, res) {
-	res.end(sass.renderSync({
-		data: fs.readFileSync(scssDir + path.basename(req.path))
-	}));
-});
 app.get("/", function(req, res) {
 	res.render("index");
 });
