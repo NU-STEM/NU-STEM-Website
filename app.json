@@ -1,0 +1,12 @@
+{
+	"name": "NU STEM Club Website",
+	"description": "Nevada Union STEM Club website",
+	"repository": "https://github.com/NU-STEM/NU-STEM-Website.git",
+	"keywords": [
+		"node",
+		"heroku",
+		"express",
+		"sass",
+		"jade"
+	]
+}

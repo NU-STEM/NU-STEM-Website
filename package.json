@@ -1,0 +1,33 @@
+{
+	"name": "NU STEM Club Website",
+	"version": "0.0.1",
+	"description": "Nevada Union STEM Club website",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "latest",
+		"github": "latest",
+		"jade": "latest",
+		"lodash": "latest",
+		"node-minify": "latest",
+		"node-sass": "latest"
+	},
+	"engines": {
+		"node": "latest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NU-STEM/NU-STEM-Website.git"
+	},
+	"keywords": [
+		"node",
+		"heroku",
+		"express",
+		"sass",
+		"jade"
+	],
+	"author": "Ryan Brott",
+	"contributors": []
+}

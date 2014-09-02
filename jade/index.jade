@@ -1,0 +1,25 @@
+include head.jade
+.ui.stackable.three.column.page.grid
+	.column
+		h1.header About Us
+		p.
+			The NU STEM Club is a student-run club at Nevada Union High School.
+			Members of the club work on extracurricular projects including computer
+			programming, CAD design, and building circuits. Club meetings take place
+			every Wednesday afterschool in G13 from around 2:30-4:30.
+	.column
+		h1.header Donate
+		p.
+			The club relies on donors, fundraisers, and grants for funding. You donation
+			will go towards buying club supplies and funding members' projects.
+		form(action="https://www.paypal.com/cgi-bin/webscr",method="POST",target="_top")
+			input(type="hidden",name="cmd",value="_s-xclick")
+			input(type="hidden",name="hosted_button_id",value="GF2JQQ9U3BV78")
+			input(type="image",src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",name="submit",alt="PayPal")
+			img(src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif")
+	.column
+		h1.header Student Projects
+		img.github-icon(src="/images/octocat.png")
+		a(href=github.org.url) View student projects on GitHub.
+		h2.header Recent
+			
