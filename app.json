@@ -2,7 +2,6 @@
 	"name": "NU STEM Club Website",
 	"description": "Nevada Union STEM Club website",
 	"repository": "https://github.com/NU-STEM/NU-STEM-Website.git",
-	"logo": "http://node-js-sample.herokuapp.com/images/node.svg",
 	"keywords": [
 		"node",
 		"heroku",

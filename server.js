@@ -49,4 +49,7 @@ app.use("/images", express.static(imagesDir));
 app.get("/", function(req, res) {
 	res.render("index");
 });
+app.get("*", function(req, res) {
+	req.end();
+});
 app.listen(80);
