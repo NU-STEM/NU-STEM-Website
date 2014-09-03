@@ -8,12 +8,14 @@ var express = require("express"),
 	_ = require("lodash"),
 	debug = process.argv.length == 3;
 	app = express(),
+	port = process.env.PORT || 80,
 	github = new GitHubApi({
 		version: "3.0.0",
 		debug: true,
 		protocol: "https",
 		host: "api.github.com"
 	});
+console.log("Running on port " + port);
 if (debug) {
 	watchr.watch({
 		paths: [scssDir],
@@ -85,7 +87,6 @@ var fontsDir = __dirname + "/fonts/",
 	scssDir = __dirname + "/scss/",
 	cssDir = __dirname + "/css/",
 	jsDir = __dirname + "/js/";
-app.set('port', (process.env.PORT || 80));
 app.set("views", __dirname + "/jade");
 app.set("view engine", "jade");
 app.engine("jade", jade.__express);
@@ -99,6 +100,4 @@ app.get("/", function(req, res) {
 app.get("*", function(req, res) {
 	res.end();
 });
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-});
+app.listen(port);
