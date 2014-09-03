@@ -4,24 +4,24 @@ var express = require("express"),
 	path = require("path"),
 	fs = require("fs"),
 	watchr = require("watchr"),
-	GitHubApi = require("github"),
 	_ = require("lodash"),
-	debug = process.argv.length == 3;
+	compressor = require("node-minify"),
+	debug = (process.argv.length == 3);
 	app = express(),
 	port = process.env.PORT || 80,
-	github = new GitHubApi({
-		version: "3.0.0",
-		debug: true,
-		protocol: "https",
-		host: "api.github.com"
-	});
+	fontsDir = __dirname + "/fonts/",
+	imagesDir = __dirname + "/images/",
+	scssDir = __dirname + "/scss/",
+	cssDir = __dirname + "/css/",
+	jsDir = __dirname + "/js/";
 console.log("Running on port " + port);
 if (debug) {
+	console.log("Running in debug mode");
 	watchr.watch({
 		paths: [scssDir],
 		listeners: {
 			change: function(changeType, filePath, fileCurrentStat, filePreviousStat) {
-				process.stdout.write("Reloading " + filePath + "...");
+				process.stdout.write("Reloading " + filePath + "... ");
 				var ext = path.extname(filePath),
 					base = path.basename(filePath, ext),
 					filename = base + ".min.css",
@@ -35,7 +35,8 @@ if (debug) {
 				});
 				process.stdout.write("done\n");
 			}
-		}
+		},
+		interval: 1000
 	});
 	watchr.watch({
 		paths: [jsDir],
@@ -57,36 +58,10 @@ if (debug) {
 				});
 				process.stdout.write("done\n");
 			}
-		}
+		},
+		interval: 1000
 	});
 }
-app.locals = {
-	"github": {}
-};
-github.orgs.get({
-	"org": "NU-STEM"
-}, function(err, data) {
-	if (err) console.warn(err);
-	else {
-		app.locals.github.org = data;
-	}
-});
-github.repos.getFromOrg({
-	"org": "NU-STEM"
-}, function(err, data) {
-	if (err) console.warn(err);
-	else {
-		// Sort data by date and limit to 5
-		// Name in the name property
-		// Date updated at in the updated_at property
-		app.locals.github.repos = data;
-	}
-});
-var fontsDir = __dirname + "/fonts/",
-	imagesDir = __dirname + "/images/",
-	scssDir = __dirname + "/scss/",
-	cssDir = __dirname + "/css/",
-	jsDir = __dirname + "/js/";
 app.set("views", __dirname + "/jade");
 app.set("view engine", "jade");
 app.engine("jade", jade.__express);
@@ -96,8 +71,5 @@ app.use("/fonts", express.static(fontsDir));
 app.use("/images", express.static(imagesDir));
 app.get("/", function(req, res) {
 	res.render("index");
-});
-app.get("*", function(req, res) {
-	res.end();
 });
 app.listen(port);

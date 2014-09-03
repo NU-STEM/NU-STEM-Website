@@ -8,7 +8,6 @@
 	},
 	"dependencies": {
 		"express": "latest",
-		"github": "latest",
 		"jade": "latest",
 		"lodash": "latest",
 		"node-minify": "latest",
