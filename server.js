@@ -3,8 +3,10 @@ var express = require("express"),
 	sass = require("node-sass");
 	path = require("path"),
 	fs = require("fs"),
+	watchr = require("watchr"),
 	GitHubApi = require("github"),
-	_ = require("lodash")
+	_ = require("lodash"),
+	debug = process.argv.length == 3;
 	app = express(),
 	github = new GitHubApi({
 		version: "3.0.0",
@@ -12,6 +14,50 @@ var express = require("express"),
 		protocol: "https",
 		host: "api.github.com"
 	});
+if (debug) {
+	watchr.watch({
+		paths: [scssDir],
+		listeners: {
+			change: function(changeType, filePath, fileCurrentStat, filePreviousStat) {
+				process.stdout.write("Reloading " + filePath + "...");
+				var ext = path.extname(filePath),
+					base = path.basename(filePath, ext),
+					filename = base + ".min.css",
+					compileFilePath = cssDir + filename;
+				sass.render({
+					file: filePath,
+					outputStyle: "compressed",
+					success: function(data) {
+						fs.writeFile(compileFilePath, data);
+					}
+				});
+				process.stdout.write("done\n");
+			}
+		}
+	});
+	watchr.watch({
+		paths: [jsDir],
+		listeners: {
+			change: function(changeType, filePath, fileCurrentStat, filePreviousStat) {
+				var ext = path.extname(filePath),
+					base = path.basename(filePath, ext);
+				if (path.extname(base) == ".min") return;
+				process.stdout.write("Reloading " + filePath + "...");
+				var filename = base + ".min.js",
+					compileFilePath = jsDir + filename;
+				new compressor.minify({
+					type: "gcc",
+					fileIn: filePath,
+					fileOut: compileFilePath,
+					callback: function(err, min) {
+						if (err) return console.warn(err);
+					}
+				});
+				process.stdout.write("done\n");
+			}
+		}
+	});
+}
 app.locals = {
 	"github": {}
 };

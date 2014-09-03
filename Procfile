@@ -1,1 +1,1 @@
-web: node release.js
+web: node server.js
